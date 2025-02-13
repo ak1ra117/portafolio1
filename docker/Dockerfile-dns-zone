@@ -1,7 +1,0 @@
-FROM python:3.9
-
-RUN pip install azure-mgmt-privatedns azure-identity
-
-COPY manage_dns_zone.py /manage_dns_zone.py
-
-CMD ["python", "/manage_dns_zone.py"]

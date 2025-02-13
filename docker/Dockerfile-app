@@ -1,8 +1,0 @@
-# Dockerfile for an Azure Python automation script
-FROM python:3.9
-
-RUN pip install azure-mgmt-network azure-identity
-
-COPY configure_dns.py /configure_dns.py
-
-CMD ["python", "/configure_dns.py"]

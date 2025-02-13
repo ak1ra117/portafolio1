@@ -1,7 +1,0 @@
-FROM python:3.9
-
-RUN pip install azure-mgmt-network azure-identity
-
-COPY create_application_gateway.py /create_application_gateway.py
-
-CMD ["python", "/create_application_gateway.py"]

@@ -1,0 +1,26 @@
+- name: Configure multiple NSG rules in Azure
+  hosts: localhost
+  tasks:
+    - name: Set multiple rules in NSG
+      azure_rm_securitygroup:
+        resource_group: "MyResourceGroup"
+        name: "MyNSG"
+        rules:
+          - name: "AllowWeb"
+            protocol: "Tcp"
+            direction: "Inbound"
+            priority: 100
+            access: "Allow"
+            source_port_range: "*"
+            destination_port_range: "80"
+            source_address_prefix: "*"
+            destination_address_prefix: "*"
+          - name: "AllowSSH"
+            protocol: "Tcp"
+            direction: "Inbound"
+            priority: 110
+            access: "Allow"
+            source_port_range: "*"
+            destination_port_range: "22"
+            source_address_prefix: "*"
+            destination_address_prefix: "*"

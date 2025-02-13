@@ -1,0 +1,8 @@
+# Dockerfile to automate VM creation in Azure
+FROM python:3.9
+
+RUN pip install azure-mgmt-compute azure-identity
+
+COPY create_vm.py /create_vm.py
+
+CMD ["python", "/create_vm.py"]

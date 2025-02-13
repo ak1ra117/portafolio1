@@ -1,0 +1,10 @@
+- name: Install Nginx Web Server
+  apt:
+    name: nginx
+    state: present
+
+- name: Enable and start Nginx
+  systemd:
+    name: nginx
+    enabled: yes
+    state: started

@@ -1,8 +1,0 @@
-- name: Deploy Virtual Network in Azure
-  hosts: localhost
-  tasks:
-    - name: Create Virtual Network
-      azure_rm_virtualnetwork:
-        resource_group: "MyResourceGroup"
-        name: "MyVNET"
-        address_prefixes: ["10.0.0.0/16"]

@@ -1,8 +1,0 @@
-- name: Deploy Application Gateway in Azure
-  hosts: localhost
-  tasks:
-    - name: Create Application Gateway
-      azure_rm_applicationgateway:
-        resource_group: "MyResourceGroup"
-        name: "MyAppGateway"
-        sku: "Standard_v2"

@@ -1,0 +1,7 @@
+FROM python:3.9
+
+RUN pip install requests
+
+COPY veeam_backup.py /veeam_backup.py
+
+CMD ["python", "/veeam_backup.py"]
